@@ -1,0 +1,8 @@
+{
+    "/"		: "com.mrdoggy.site.web.Controller.home" ,
+    "/login/" : {
+        "GET" 	: "com.mrdoggy.site.web.Controller.showLogin",
+        "POST" 	: "com.mrdoggy.site.web.Controller.processLogin"
+    }  ,
+    "/static/**": "static"
+}
