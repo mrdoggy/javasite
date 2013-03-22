@@ -1,8 +1,8 @@
 {
-    "/"		: "com.mrdoggy.site.web.Controller.home" ,
+    "/"		: {"GET" : "com.mrdoggy.site.controller.MainController.home"} ,
     "/login/" : {
-        "GET" 	: "com.mrdoggy.site.web.Controller.showLogin",
-        "POST" 	: "com.mrdoggy.site.web.Controller.processLogin"
+        "GET" 	: "com.mrdoggy.site.controller.MainController.showLogin",
+        "POST" 	: "com.mrdoggy.site.controller.MainController.processLogin"
     }  ,
     "/static/**": "static"
 }

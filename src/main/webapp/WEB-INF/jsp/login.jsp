@@ -1,17 +1,21 @@
 <%--
-  Created by IntelliJ IDEA.
   User: mrdoggy
   Date: 20.03.13
   Time: 23:40
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    Login page
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="tags" tagdir="/WEB-INF/tags"%>
+
+<tags:header id="tasks"/>
+
+    <c:forEach items="${errors}" var="err">
+        <div class="error">${err}</div>
+    </c:forEach>
+
+Login page
     <form action="/login/" method="post">
     <table>
         <tr>
@@ -20,13 +24,13 @@
         </tr>
         <tr>
             <td>password:</td>
-            <td><input type="password" name="login" value=""></td>
+            <td><input type="password" name="password" value=""></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td><input type="submit" name="" value="password"></td>
+            <td><input type="submit" name="" value="login"></td>
         </tr>
     </table>
     </form>
-</body>
-</html>
+
+<tags:footer/>
